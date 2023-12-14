@@ -1,0 +1,163 @@
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
+p {
+    font-size: large;
+}
+
+
+.flex-container {
+    display: flex;
+    height: 100%;
+}
+
+.contacts-window {
+    flex: 1;
+    background-color: lightblue;
+}
+
+.contacts-window .top-bar{
+    display: flex;
+    justify-content: space-between;
+    background-color: cadetblue;
+    padding: 10px;
+    margin:0;
+    border: solid;
+}
+
+.contacts-window .search-bar {
+    display: flex;
+    justify-content: space-around;
+    padding: 3px;
+    border: solid;
+    background-color: whitesmoke;
+    height: 40px;
+    margin: 4px;
+    border-radius: 6px;
+}
+
+
+.contact-item .contact-cards{
+    height: 10px;
+}
+.contacts-window .contact-item {
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    border: solid;
+    margin: 0.5px;
+}
+
+.contacts-window .contact-item .contact-image {
+    display:flex; align-items: center; justify-content: center; padding-right: 10px;
+}
+
+
+.chat-window {
+    flex: 3;
+    background-color: lightcoral;
+}
+
+.chat-window .top-bar {
+    display: flex;
+    justify-content: space-between;
+    background-color: cadetblue;
+    padding: 10px;
+    margin:0;
+    border: solid;
+}
+
+.chat-window .top-bar .load-contact-image{
+    display:flex; 
+    align-items: center; 
+    justify-content: center; 
+    padding-right: 10px
+}
+
+.chat-window .top-bar .load-contact-name{
+    display:flex; align-items: center; justify-content: center; height: fit-content;
+}
+
+
+.chat-window .message-box {
+    width: 75%;
+    background-color: whitesmoke;
+    bottom: 0;
+    height: 8%;
+    display: flex;
+    position: absolute;
+}
+
+
+.chat-window .text-box-self {
+    
+    padding:5px 6px 8px 6px;
+    border-radius: 6px;
+    margin-right: 40px;
+    color:whitesmoke;
+    background-color: cadetblue;
+    position: relative;
+    width: fit-content;
+    margin-bottom: 10px;
+    align-self: flex-end;
+  }
+
+  .chat-window .text-box-self:after {
+    content: "";
+    position:absolute;
+    margin-top:-6px;
+    margin-left:-5px;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid cadetblue;
+    transform:rotate(-45deg);
+    right: -15px; 
+    top: 8px;
+    width: fit-content;
+    margin-bottom: 10px;
+    align-self: flex-end;
+  }
+
+
+  .chat-window .text-box-other {
+    display:inline-block;
+    padding:5px 6px 8px 6px;
+    border-radius: 6px;
+    margin-left: 40px;
+    color:whitesmoke;
+    background-color: cadetblue;
+    position: relative;
+    float: left;
+    width: fit-content;
+    margin-bottom: 10px;
+  }
+
+  .chat-window .text-box-other:after {
+    content: "";
+    position:absolute;
+    margin-top:-6px;
+    margin-left:-5px;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid cadetblue;
+    transform:rotate(45deg);
+    left: -10px; 
+    top: 8px;
+    width: fit-content;
+    margin-bottom: 5px;
+  }
+
+
+  .chat-window .text-area{
+    margin: 20px;
+    overflow-y : scroll; 
+    height:600px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .chat-window .text-area::-webkit-scrollbar {
+    display: none;
+  }
